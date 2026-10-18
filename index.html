@@ -18,7 +18,7 @@
       --text-muted: #64748b;
       --border-color: #edf2f7;
       
-      /* Pastel Category Tones */
+      /* Pastel Category Accents */
       --german-bg: #ffe4e6;
       --german-text: #be123c;
       --qa-bg: #ccfbf1;
@@ -82,11 +82,11 @@
     p.subtitle {
       font-size: 1.1rem;
       color: var(--text-muted);
-      max-width: 620px;
+      max-width: 650px;
       margin: 0 auto;
     }
 
-    /* Search & Filter Controls */
+    /* Controls (Search + Filters) */
     .controls-wrapper {
       display: flex;
       flex-direction: column;
@@ -97,7 +97,7 @@
 
     .search-box {
       width: 100%;
-      max-width: 460px;
+      max-width: 480px;
       position: relative;
     }
 
@@ -158,14 +158,14 @@
       color: #ffffff;
     }
 
-    /* Grid Layout */
+    /* Cards Grid */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
       gap: 24px;
     }
 
-    /* Card Styling */
+    /* Card Item */
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
@@ -198,7 +198,7 @@
       margin-bottom: 14px;
     }
 
-    /* Category Specific Colors */
+    /* Colors per category */
     .card[data-category="german"] .tag { background: var(--german-bg); color: var(--german-text); }
     .card[data-category="qa"] .tag { background: var(--qa-bg); color: var(--qa-text); }
     .card[data-category="islamic"] .tag { background: var(--islam-bg); color: var(--islam-text); }
@@ -297,23 +297,23 @@
     
     <!-- Header -->
     <header>
-      <div class="badge-welcome">✨ Interactive Project Portal</div>
-      <h1>Educational & Testing Hub</h1>
-      <p class="subtitle">Quick access to interactive language tools, QA automation practices, and children's learning resources.</p>
+      <div class="badge-welcome">✨ Learning & Development Hub</div>
+      <h1>Educational & Testing Projects</h1>
+      <p class="subtitle">A unified space for interactive language tools, automated testing practices, and children's educational apps.</p>
     </header>
 
     <!-- Controls (Search + Filters) -->
     <div class="controls-wrapper">
       <div class="search-box">
         <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Search projects by name or keyword..." />
+        <input type="text" id="searchInput" placeholder="Search by title, keyword, or language..." />
       </div>
 
       <div class="filters">
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="german">🇩🇪 German</button>
         <button class="filter-btn" data-filter="qa">🤖 Testing & AI</button>
-        <button class="filter-btn" data-filter="islamic">🕌 Islamic Studies</button>
+        <button class="filter-btn" data-filter="islamic">🕌 مسابقات إسلامية</button>
         <button class="filter-btn" data-filter="arabic">📖 اللغة العربية</button>
         <button class="filter-btn" data-filter="english">🇬🇧 English</button>
       </div>
@@ -322,7 +322,7 @@
     <!-- Cards Grid -->
     <main class="projects-grid" id="projectsGrid">
 
-      <!-- GERMAN PROJECTS -->
+      <!-- ================= GERMAN PROJECTS ================= -->
       <div class="card" data-category="german">
         <div class="card-top">
           <span class="tag">German • Early Learning</span>
@@ -350,7 +350,7 @@
         <a href="https://yekoshy.github.io/telc_b1/wortschatz.html" target="_blank" class="card-btn">Open Project ↗</a>
       </div>
 
-      <!-- TESTING & AI -->
+      <!-- ================= TESTING & AI ================= -->
       <div class="card" data-category="qa">
         <div class="card-top">
           <span class="tag">QA • Software Testing</span>
@@ -405,17 +405,53 @@
         <a href="https://yekoshy.github.io/OrientationCourse/" target="_blank" class="card-btn">Open Project ↗</a>
       </div>
 
-      <!-- ISLAMIC STUDIES -->
-      <div class="card" data-category="islamic">
+      <!-- ================= ISLAMIC STUDIES (IN ARABIC) ================= -->
+      <div class="card arabic-card" data-category="islamic">
         <div class="card-top">
-          <span class="tag">Kids • Islamic Studies</span>
-          <h2 class="card-title">🕌 Islamic Quizzes for Kids</h2>
-          <p class="card-desc">Gentle and engaging quizzes introducing children to Islamic manners, pillars, prophetic stories, and morals.</p>
+          <span class="tag">القرآن الكريم • مسابقات</span>
+          <h2 class="card-title">📖 مسابقات القرآن الكريم</h2>
+          <p class="card-desc">أسئلة ومسابقات تفاعلية ممتعة وشيقة تدور حول سور وآيات القرآن الكريم ومعانيها المبسطة للأطفال والناشئة.</p>
         </div>
-        <a href="https://yekoshy.github.io/IslamicQuizzes/" target="_blank" class="card-btn">Open Project ↗</a>
+        <a href="https://yekoshy.github.io/QuranQuizzes/" target="_blank" class="card-btn">افتح المسابقة ↗</a>
       </div>
 
-      <!-- ARABIC LEARNING (Introduced in Arabic with RTL) -->
+      <div class="card arabic-card" data-category="islamic">
+        <div class="card-top">
+          <span class="tag">قصص الأنبياء • مسابقات</span>
+          <h2 class="card-title">🌿 مسابقات قصص الأنبياء</h2>
+          <p class="card-desc">رحلة معرفية تفاعلية حول قصص الأنبياء والرسل عليهم الصلاة والسلام وأهم العبر والدروس المستفادة من سيرتهم.</p>
+        </div>
+        <a href="https://yekoshy.github.io/AnbiyaaQuizzes/" target="_blank" class="card-btn">افتح المسابقة ↗</a>
+      </div>
+
+      <div class="card arabic-card" data-category="islamic">
+        <div class="card-top">
+          <span class="tag">السيرة النبوية • مسابقات</span>
+          <h2 class="card-title">📜 مسابقات السيرة النبوية</h2>
+          <p class="card-desc">تحديات وأسئلة تفاعلية مميزة تسلط الضوء على محطات حياة رسول الله ﷺ وأخلاقه وغزواته الشريفة بأسلوب محبب للأطفال.</p>
+        </div>
+        <a href="https://yekoshy.github.io/SirahQuizzes/" target="_blank" class="card-btn">افتح المسابقة ↗</a>
+      </div>
+
+      <div class="card arabic-card" data-category="islamic">
+        <div class="card-top">
+          <span class="tag">الصحابة الكرام • مسابقات</span>
+          <h2 class="card-title">⭐ مسابقات صحابة رسول الله</h2>
+          <p class="card-desc">مسابقات تهدف إلى تعريف الجيل الناشئ بقدوات الإسلام من صحابة النبي ﷺ ومواقفهم البطولية وتضحياتهم.</p>
+        </div>
+        <a href="https://yekoshy.github.io/SahabaQuizzes/" target="_blank" class="card-btn">افتح المسابقة ↗</a>
+      </div>
+
+      <div class="card arabic-card" data-category="islamic">
+        <div class="card-top">
+          <span class="tag">تلاوة القرآن • أحكام التجويد</span>
+          <h2 class="card-title">🎙️ تجويد القرآن للأطفال</h2>
+          <p class="card-desc">منصة تفاعلية لطيفة ومبسطة لتعليم الأطفال أحكام وقواعد تجويد القرآن الكريم خطوة بخطوة بطريقة مرئية وسلسة.</p>
+        </div>
+        <a href="https://yekoshy.github.io/Tajweed_kids/" target="_blank" class="card-btn">افتح التطبيق ↗</a>
+      </div>
+
+      <!-- ================= ARABIC LEARNING (IN ARABIC) ================= -->
       <div class="card arabic-card" data-category="arabic">
         <div class="card-top">
           <span class="tag">اللغة العربية • البوابة الرئيسية</span>
@@ -443,7 +479,7 @@
         <a href="https://yekoshy.github.io/ArabicLearningResources/spelling.html" target="_blank" class="card-btn">افتح التطبيق ↗</a>
       </div>
 
-      <!-- ENGLISH LEARNING -->
+      <!-- ================= ENGLISH LEARNING ================= -->
       <div class="card" data-category="english">
         <div class="card-top">
           <span class="tag">English • Literacy</span>
