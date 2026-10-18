@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Hub | @yekoshy</title>
+  
+  <!-- Google Fonts: Outfit for English & Cairo for Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #fbfbfe;
+      --card-bg: #ffffff;
+      --text-main: #2d3748;
+      --text-muted: #64748b;
+      --border-color: #edf2f7;
+      
+      /* Pastel Category Tones */
+      --german-bg: #ffe4e6;
+      --german-text: #be123c;
+      --qa-bg: #ccfbf1;
+      --qa-text: #0f766e;
+      --islam-bg: #fef3c7;
+      --islam-text: #b45309;
+      --arabic-bg: #dcfce7;
+      --arabic-text: #15803d;
+      --english-bg: #e0f2fe;
+      --english-text: #0369a1;
+
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 16px 25px -4px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --radius: 18px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .badge-welcome {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #f1f5f9;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Search & Filter Controls */
+    .controls-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .search-box {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px 20px 14px 44px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      background: var(--card-bg);
+      outline: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .search-box input:focus {
+      border-color: #cbd5e1;
+      box-shadow: 0 0 0 4px rgba(226, 232, 240, 0.6);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      opacity: 0.5;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      border: 1.5px solid transparent;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 12px;
+      background: var(--card-bg);
+      color: var(--text-muted);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      background: #f8fafc;
+      color: var(--text-main);
+    }
+
+    .filter-btn.active {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    /* Grid Layout */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 24px;
+    }
+
+    /* Card Styling */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #e2e8f0;
+    }
+
+    .card-top {
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    /* Category Specific Colors */
+    .card[data-category="german"] .tag { background: var(--german-bg); color: var(--german-text); }
+    .card[data-category="qa"] .tag { background: var(--qa-bg); color: var(--qa-text); }
+    .card[data-category="islamic"] .tag { background: var(--islam-bg); color: var(--islam-text); }
+    .card[data-category="arabic"] .tag { background: var(--arabic-bg); color: var(--arabic-text); }
+    .card[data-category="english"] .tag { background: var(--english-bg); color: var(--english-text); }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    /* Arabic Card specific RTL adjustments */
+    .arabic-card {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .arabic-card .card-title {
+      font-weight: 700;
+    }
+
+    .arabic-card .card-desc {
+      font-size: 0.98rem;
+      color: #4b5563;
+    }
+
+    /* Action Link */
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 12px 18px;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      color: #334155;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .card-btn:hover {
+      background: #1e293b;
+      border-color: #1e293b;
+      color: #ffffff;
+    }
+
+    .arabic-card .card-btn {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 70px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #1e293b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      body { padding: 25px 15px 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <header>
+      <div class="badge-welcome">✨ Interactive Project Portal</div>
+      <h1>Educational & Testing Hub</h1>
+      <p class="subtitle">Quick access to interactive language tools, QA automation practices, and children's learning resources.</p>
+    </header>
+
+    <!-- Controls (Search + Filters) -->
+    <div class="controls-wrapper">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search projects by name or keyword..." />
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="german">🇩🇪 German</button>
+        <button class="filter-btn" data-filter="qa">🤖 Testing & AI</button>
+        <button class="filter-btn" data-filter="islamic">🕌 Islamic Studies</button>
+        <button class="filter-btn" data-filter="arabic">📖 اللغة العربية</button>
+        <button class="filter-btn" data-filter="english">🇬🇧 English</button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <main class="projects-grid" id="projectsGrid">
+
+      <!-- GERMAN PROJECTS -->
+      <div class="card" data-category="german">
+        <div class="card-top">
+          <span class="tag">German • Early Learning</span>
+          <h2 class="card-title">🎈 Kids Before School</h2>
+          <p class="card-desc">Playful early German vocabulary exercises, sounds, and visual learning games tailored for preschool children.</p>
+        </div>
+        <a href="https://yekoshy.github.io/German/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="german">
+        <div class="card-top">
+          <span class="tag">German • Grundschule</span>
+          <h2 class="card-title">🎒 Primary School German</h2>
+          <p class="card-desc">Vocabulary builders, basic grammar, and reading exercises designed for elementary school (Grundschule) kids.</p>
+        </div>
+        <a href="https://yekoshy.github.io/German/grundschule.html" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="german">
+        <div class="card-top">
+          <span class="tag">German • Exam Prep</span>
+          <h2 class="card-title">🎯 Telc B1 Wortschatz</h2>
+          <p class="card-desc">Targeted vocabulary revision and training platform to master the word bank required for the official Telc B1 exam.</p>
+        </div>
+        <a href="https://yekoshy.github.io/telc_b1/wortschatz.html" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <!-- TESTING & AI -->
+      <div class="card" data-category="qa">
+        <div class="card-top">
+          <span class="tag">QA • Software Testing</span>
+          <h2 class="card-title">🐞 Bug Type Quiz</h2>
+          <p class="card-desc">Interactive quiz assessing software defect types, severity, priority levels, and software testing terminology.</p>
+        </div>
+        <a href="https://yekoshy.github.io/Bug_Type_Quiz/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="qa">
+        <div class="card-top">
+          <span class="tag">QA • Career Roadmap</span>
+          <h2 class="card-title">🗺️ QA Testing Track</h2>
+          <p class="card-desc">Structured guide and interactive curriculum covering manual testing foundations, automation, and QA best practices.</p>
+        </div>
+        <a href="https://yekoshy.github.io/QA_testing_track/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="qa">
+        <div class="card-top">
+          <span class="tag">Automation • Playwright</span>
+          <h2 class="card-title">🎭 Playwright Record & Play</h2>
+          <p class="card-desc">Hands-on interactive showcase demonstrating Playwright Codegen workflows, test generation, and test execution.</p>
+        </div>
+        <a href="https://yekoshy.github.io/Playwright_Record-n-Play/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="qa">
+        <div class="card-top">
+          <span class="tag">Automation • Full Stack QA</span>
+          <h2 class="card-title">🧮 Calculator UI & API Testing</h2>
+          <p class="card-desc">End-to-end automated UI and backend REST API test suites implemented with Playwright and modern testing assertions.</p>
+        </div>
+        <a href="https://yekoshy.github.io/Calculator_UI-n-API_Playwright_testing/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="qa">
+        <div class="card-top">
+          <span class="tag">AI • Research & Tools</span>
+          <h2 class="card-title">⚖️ AI Models Comparison</h2>
+          <p class="card-desc">Comparative analysis and benchmarks evaluating different LLMs, AI agents, and conversational capabilities.</p>
+        </div>
+        <a href="https://yekoshy.github.io/AIComparison/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <div class="card" data-category="qa">
+        <div class="card-top">
+          <span class="tag">Integration • Quiz Tool</span>
+          <h2 class="card-title">🇩🇪 Orientation Course Quiz</h2>
+          <p class="card-desc">Interactive practice test companion for the German *Leben in Deutschland* (Orientation Course) citizenship exam.</p>
+        </div>
+        <a href="https://yekoshy.github.io/OrientationCourse/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <!-- ISLAMIC STUDIES -->
+      <div class="card" data-category="islamic">
+        <div class="card-top">
+          <span class="tag">Kids • Islamic Studies</span>
+          <h2 class="card-title">🕌 Islamic Quizzes for Kids</h2>
+          <p class="card-desc">Gentle and engaging quizzes introducing children to Islamic manners, pillars, prophetic stories, and morals.</p>
+        </div>
+        <a href="https://yekoshy.github.io/IslamicQuizzes/" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+      <!-- ARABIC LEARNING (Introduced in Arabic with RTL) -->
+      <div class="card arabic-card" data-category="arabic">
+        <div class="card-top">
+          <span class="tag">اللغة العربية • البوابة الرئيسية</span>
+          <h2 class="card-title">🌟 مصادر تعلم اللغة العربية</h2>
+          <p class="card-desc">البوابة التفاعلية الشاملة لتعليم الحروف والكلمات العربية للأطفال والمبتدئين بأسلوب بصري تفاعلي وممتع.</p>
+        </div>
+        <a href="https://yekoshy.github.io/ArabicLearningResources/" target="_blank" class="card-btn">افتح التطبيق ↗</a>
+      </div>
+
+      <div class="card arabic-card" data-category="arabic">
+        <div class="card-top">
+          <span class="tag">اللغة العربية • تمارين وكتابة</span>
+          <h2 class="card-title">📝 كراسة التمارين الرقمية</h2>
+          <p class="card-desc">كراسة تفاعلية للتدرب على رسم الحروف الأبجدية، تمييز أشكالها المختلفة في الكلمة، وتحسين مهارة الخط.</p>
+        </div>
+        <a href="https://yekoshy.github.io/ArabicLearningResources/ArabicWorkbook.html" target="_blank" class="card-btn">افتح التطبيق ↗</a>
+      </div>
+
+      <div class="card arabic-card" data-category="arabic">
+        <div class="card-top">
+          <span class="tag">اللغة العربية • تحديات إملائية</span>
+          <h2 class="card-title">✏️ تدريب الإملاء وتكوين الكلمات</h2>
+          <p class="card-desc">أنشطة وتحديات إملائية شيقة تهدف لتدريب الطفل على دمج الحروف وتهجئة الكلمات العربية بطريقة صحيحة.</p>
+        </div>
+        <a href="https://yekoshy.github.io/ArabicLearningResources/spelling.html" target="_blank" class="card-btn">افتح التطبيق ↗</a>
+      </div>
+
+      <!-- ENGLISH LEARNING -->
+      <div class="card" data-category="english">
+        <div class="card-top">
+          <span class="tag">English • Literacy</span>
+          <h2 class="card-title">🔤 Sight Words Interactive</h2>
+          <p class="card-desc">Interactive flashcards and phonics exercises to help young readers quickly master essential English sight words.</p>
+        </div>
+        <a href="https://yekoshy.github.io/English/sightwords/index.html" target="_blank" class="card-btn">Open Project ↗</a>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Created with care by <a href="https://github.com/yekoshy" target="_blank">@yekoshy</a> • Hosted on GitHub Pages</p>
+    </footer>
+
+  </div>
+
+  <!-- Interactive Search and Filter Script -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    let currentFilter = 'all';
+
+    function filterProjects() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const text = card.textContent.toLowerCase();
+        
+        const matchesFilter = (currentFilter === 'all') || (category === currentFilter);
+        const matchesSearch = text.includes(searchTerm);
+
+        if (matchesFilter && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Filter Buttons Click
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        filterProjects();
+      });
+    });
+
+    // Real-time Search Input
+    searchInput.addEventListener('input', filterProjects);
+  </script>
+
+</body>
+</html>
