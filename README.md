@@ -5,17 +5,19 @@
 ### ✨ Educational & Testing Projects
 *A unified space for interactive language tools, automated testing practices, and children's educational apps.*
 
-![German Learning](https://img.shields.io/badge/🇩🇪_German-4_Projects-ffe4e6?style=for-the-badge&labelColor=be123c)
-![Testing & AI](https://img.shields.io/badge/🤖_Testing_%26_AI-6_Projects-ccfbf1?style=for-the-badge&labelColor=0f766e)
-![Islamic Quizzes](https://img.shields.io/badge/🕌_Islamic_Quizzes-5_Projects-fef3c7?style=for-the-badge&labelColor=b45309)
-![Arabic Learning](https://img.shields.io/badge/📖_Arabic-3_Projects-dcfce7?style=for-the-badge&labelColor=15803d)
-![English Learning](https://img.shields.io/badge/🇬🇧_English-1_Project-e0f2fe?style=for-the-badge&labelColor=0369a1)
+[![German Learning](https://img.shields.io/badge/🇩🇪_German-4_Projects-ffe4e6?style=for-the-badge&labelColor=be123c)](#german)
+[![Testing & AI](https://img.shields.io/badge/🤖_Testing_%26_AI-6_Projects-ccfbf1?style=for-the-badge&labelColor=0f766e)](#testing-and-ai)
+[![Islamic Studies](https://img.shields.io/badge/🕌_Islamic_Studies-5_Projects-fef3c7?style=for-the-badge&labelColor=b45309)](#islamic-studies)
+[![Arabic Learning](https://img.shields.io/badge/📖_Arabic-3_Projects-dcfce7?style=for-the-badge&labelColor=15803d)](#arabic-learning)
+[![English Learning](https://img.shields.io/badge/🇬🇧_English-1_Project-e0f2fe?style=for-the-badge&labelColor=0369a1)](#english)
+
+[🇩🇪 German](#german) • [🤖 Testing & AI](#testing-and-ai) • [🕌 مسابقات إسلامية](#islamic-studies) • [📖 اللغة العربية](#arabic-learning) • [🇬🇧 English](#english)
 
 </div>
 
 ---
 
-## 🇩🇪 German
+## German
 
 | Project | Focus | Description | Link |
 | :--- | :--- | :--- | :---: |
@@ -26,7 +28,7 @@
 
 ---
 
-## 🤖 Testing & AI
+## Testing and AI
 
 | Project | Focus | Description | Link |
 | :--- | :--- | :--- | :---: |
@@ -39,29 +41,101 @@
 
 ---
 
-## 🕌 مسابقات إسلامية (Islamic Studies)
+## Islamic Studies
 
-| المشروع | التصنيف | الوصف | الرابط |
-| :--- | :--- | :--- | :---: |
-| **📖 مسابقات القرآن الكريم** | القرآن الكريم • مسابقات | أسئلة ومسابقات تفاعلية ممتعة وشيقة تدور حول سور وآيات القرآن الكريم ومعانيها المبسطة للأطفال والناشئة. | [افتح المسابقة ↗](https://yekoshy.github.io/QuranQuizzes/) |
-| **🌿 مسابقات قصص الأنبياء** | قصص الأنبياء • مسابقات | رحلة معرفية تفاعلية حول قصص الأنبياء والرسل عليهم الصلاة والسلام وأهم العبر والدروس المستفادة من سيرتهم. | [افتح المسابقة ↗](https://yekoshy.github.io/AnbiyaaQuizzes/) |
-| **📜 مسابقات السيرة النبوية** | السيرة النبوية • مسابقات | تحديات وأسئلة تفاعلية مميزة تسلط الضوء على محطات حياة رسول الله ﷺ وأخلاقه وغزواته الشريفة بأسلوب محبب للأطفال. | [افتح المسابقة ↗](https://yekoshy.github.io/SirahQuizzes/) |
-| **⭐ مسابقات صحابة رسول الله** | الصحابة الكرام • مسابقات | مسابقات تهدف إلى تعريف الجيل الناشئ بقدوات الإسلام من صحابة النبي ﷺ ومواقفهم البطولية وتضحياتهم. | [افتح المسابقة ↗](https://yekoshy.github.io/SahabaQuizzes/) |
-| **🎙️ تجويد القرآن للأطفال** | تلاوة القرآن • أحكام التجويد | منصة تفاعلية لطيفة ومبسطة لتعليم الأطفال أحكام وقواعد تجويد القرآن الكريم خطوة بخطوة بطريقة مرئية وسلسة. | [افتح التطبيق ↗](https://yekoshy.github.io/Tajweed_kids/) |
+<div dir="rtl">
+
+<h3 align="right">🕌 مسابقات إسلامية</h3>
+
+<table dir="rtl" width="100%">
+  <thead>
+    <tr>
+      <th align="right">المشروع</th>
+      <th align="right">التصنيف</th>
+      <th align="right">الوصف</th>
+      <th align="center">الرابط</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="right"><strong>📖 مسابقات القرآن الكريم</strong></td>
+      <td align="right">القرآن الكريم • مسابقات</td>
+      <td align="right">أسئلة ومسابقات تفاعلية ممتعة وشيقة تدور حول سور وآيات القرآن الكريم ومعانيها المبسطة للأطفال والناشئة.</td>
+      <td align="center"><a href="https://yekoshy.github.io/QuranQuizzes/">افتح المسابقة ↗</a></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>🌿 مسابقات قصص الأنبياء</strong></td>
+      <td align="right">قصص الأنبياء • مسابقات</td>
+      <td align="right">رحلة معرفية تفاعلية حول قصص الأنبياء والرسل عليهم الصلاة والسلام وأهم العبر والدروس المستفادة من سيرتهم.</td>
+      <td align="center"><a href="https://yekoshy.github.io/AnbiyaaQuizzes/">افتح المسابقة ↗</a></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>📜 مسابقات السيرة النبوية</strong></td>
+      <td align="right">السيرة النبوية • مسابقات</td>
+      <td align="right">تحديات وأسئلة تفاعلية مميزة تسلط الضوء على محطات حياة رسول الله ﷺ وأخلاقه وغزواته الشريفة بأسلوب محبب للأطفال.</td>
+      <td align="center"><a href="https://yekoshy.github.io/SirahQuizzes/">افتح المسابقة ↗</a></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>⭐ مسابقات صحابة رسول الله</strong></td>
+      <td align="right">الصحابة الكرام • مسابقات</td>
+      <td align="right">مسابقات تهدف إلى تعريف الجيل الناشئ بقدوات الإسلام من صحابة النبي ﷺ ومواقفهم البطولية وتضحياتهم.</td>
+      <td align="center"><a href="https://yekoshy.github.io/SahabaQuizzes/">افتح المسابقة ↗</a></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>🎙️ تجويد القرآن للأطفال</strong></td>
+      <td align="right">تلاوة القرآن • أحكام التجويد</td>
+      <td align="right">منصة تفاعلية لطيفة ومبسطة لتعليم الأطفال أحكام وقواعد تجويد القرآن الكريم خطوة بخطوة بطريقة مرئية وسلسة.</td>
+      <td align="center"><a href="https://yekoshy.github.io/Tajweed_kids/">افتح التطبيق ↗</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 ---
 
-## 📖 اللغة العربية (Arabic Learning)
+## Arabic Learning
 
-| المشروع | التصنيف | الوصف | الرابط |
-| :--- | :--- | :--- | :---: |
-| **🌟 مصادر تعلم اللغة العربية** | البوابة الرئيسية | البوابة التفاعلية الشاملة لتعليم الحروف والكلمات العربية للأطفال والمبتدئين بأسلوب بصري تفاعلي وممتع. | [افتح التطبيق ↗](https://yekoshy.github.io/ArabicLearningResources/) |
-| **📝 كراسة التمارين الرقمية** | تمارين وكتابة | كراسة تفاعلية للتدرب على رسم الحروف الأبجدية، تمييز أشكالها المختلفة في الكلمة، وتحسين مهارة الخط. | [افتح التطبيق ↗](https://yekoshy.github.io/ArabicLearningResources/ArabicWorkbook.html) |
-| **✏️ تدريب الإملاء وتكوين الكلمات** | تحديات إملائية | أنشطة وتحديات إملائية شيقة تهدف لتدريب الطفل على دمج الحروف وتهجئة الكلمات العربية بطريقة صحيحة. | [افتح التطبيق ↗](https://yekoshy.github.io/ArabicLearningResources/spelling.html) |
+<div dir="rtl">
+
+<h3 align="right">📖 اللغة العربية</h3>
+
+<table dir="rtl" width="100%">
+  <thead>
+    <tr>
+      <th align="right">المشروع</th>
+      <th align="right">التصنيف</th>
+      <th align="right">الوصف</th>
+      <th align="center">الرابط</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="right"><strong>🌟 مصادر تعلم اللغة العربية</strong></td>
+      <td align="right">اللغة العربية • البوابة الرئيسية</td>
+      <td align="right">البوابة التفاعلية الشاملة لتعليم الحروف والكلمات العربية للأطفال والمبتدئين بأسلوب بصري تفاعلي وممتع.</td>
+      <td align="center"><a href="https://yekoshy.github.io/ArabicLearningResources/">افتح التطبيق ↗</a></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>📝 كراسة التمارين الرقمية</strong></td>
+      <td align="right">اللغة العربية • تمارين وكتابة</td>
+      <td align="right">كراسة تفاعلية للتدرب على رسم الحروف الأبجدية، تمييز أشكالها المختلفة في الكلمة، وتحسين مهارة الخط.</td>
+      <td align="center"><a href="https://yekoshy.github.io/ArabicLearningResources/ArabicWorkbook.html">افتح التطبيق ↗</a></td>
+    </tr>
+    <tr>
+      <td align="right"><strong>✏️ تدريب الإملاء وتكوين الكلمات</strong></td>
+      <td align="right">اللغة العربية • تحديات إملائية</td>
+      <td align="right">أنشطة وتحديات إملائية شيقة تهدف لتدريب الطفل على دمج الحروف وتهجئة الكلمات العربية بطريقة صحيحة.</td>
+      <td align="center"><a href="https://yekoshy.github.io/ArabicLearningResources/spelling.html">افتح التطبيق ↗</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 ---
 
-## 🇬🇧 English
+## English
 
 | Project | Focus | Description | Link |
 | :--- | :--- | :--- | :---: |
